@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <div>
+      我們用了 node <script>document.write(process.versions.node)</script>,
+      Chrome <script>document.write(process.versions.chrome)</script>,
+      以及 Electron <script>document.write(process.versions.electron)</script>.
+    </div>
+    <div>
+      time: <script>document.write( (new Date()).toISOgitString() )</script>
+    </div>
+    <button onclick="clickButton()" >
+      send
+    </button>
+  </body>
+  <script src="./app.js">
+  </script>
+</html>
