@@ -1,23 +1,48 @@
 {
   "name": "handgetdicom",
   "version": "0.1.0",
-  "description": "",
+  "description": "download dicom image",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder -w",
+    "postinstall": "electron-builder install-app-deps"
   },
   "author": "tao",
   "license": "ISC",
+  "build": {
+    "appId": "Kfsyscc.Getdicom.0001",
+    "deb": {
+      "packageCategory": "Office"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis" ,
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    }
+  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
-    "electron": "^6.0.0"
+    "electron": "^6.0.0",
+    "electron-builder": "^21.2.0",
+    "electron-rebuild": "^1.8.5"
   },
   "dependencies": {
+    "@babel/core": "^7.5.5",
     "@babel/register": "^7.5.5",
     "electron-reload": "^1.5.0",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "scp2": "^0.5.0",
+    "ssh2": "^0.8.5",
+    "zerorpc": "^0.9.8"
   }
 }

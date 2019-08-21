@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
+    <link rel="stylesheet" href="./style.css">
+    <title>DICOM 影像檔案下載</title>
+</head>
+<body>
+    <div class = 'app-title' >DICOM 影像檔案下載</div>
     <div>
-      我們用了 node <script>document.write(process.versions.node)</script>,
-      Chrome <script>document.write(process.versions.chrome)</script>,
-      以及 Electron <script>document.write(process.versions.electron)</script>.
+        <div class="studyid-input-label" ><script>document.write('StudyID 清單\n用逗號分開')</script></div>
+        <textarea id = "studyid-input" class='studyid-input' rows="10" cols="10" ></textarea>
     </div>
     <div>
-      time: <script>document.write( (new Date()).toISOgitString() )</script>
+        <div class="download-directory-block">
+            <div class="download-title">
+                <div  class="download-title-label">
+                    下載至資料夾:
+                </div>
+                <button class = "download-title-button" onclick="document.getElementById('pick-directory-real').click();" >
+                    選 擇
+                </button>
+                <input id = "pick-directory-real" class='pick-directory-real' type="file" webkitdirectory onchange="pickFileDirectory(this.files[0].path)" />
+            </div>
+            <div  >
+                <div class="download-directory" id = "download-directory" ></div>
+            </div>
+        </div>
     </div>
-    <button onclick="clickButton()" >
-      send
-    </button>
-  </body>
-  <script src="./app.js">
-  </script>
+    <div id="download-file-button-container">
+        <button id="download-file-button" onclick="downloadFile()">
+            Download
+        </button>
+    </div>
+    <div id = "result-message">
+    </div>
+    <div id = "err-message">
+    </div>
+</body>
+<script src="./app.js">
+</script>
+
 </html>
+
+<!-- <script>document.write(process.versions.electron)</script>. -->

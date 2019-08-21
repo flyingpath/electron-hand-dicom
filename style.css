@@ -1,0 +1,116 @@
+@font-face {
+    font-family: Taipei-Black;
+    src: url(./TaipeiSansTCBeta-Regular.ttf);
+}
+
+body {
+    font-family: Taipei-Black;
+    padding-left: 10px;
+}
+
+.app-title {
+    color: brown;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+.studyid-input-label {
+    font-size: 14px;
+    color: #353535;
+    margin: 6px 0px;
+}
+
+.studyid-input {
+    resize:none;
+    width:425px;
+    border-radius: 5px;
+    box-shadow: -1px 1px 4px 1px #d427002e;
+    border: 1px solid #65080447;
+    box-sizing: border-box;
+    color: #480000a1;
+    padding-top: 5px;
+}
+
+.studyid-input:focus{
+    outline: none;
+}
+
+.download-directory-block {
+    font-size: 14px;
+    color: #353535;
+    margin: 8px 0px;
+}
+
+.pick-directory-real {
+    display:none;
+}
+
+.download-directory {
+    min-height: 25px;
+    margin: 10px 0px 5px 0px;
+    border: 1px solid #88080873;
+    padding: 10px 5px 10px 5px;
+    width: 425px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background: #ffe8c92e;
+    color: #461212;
+    min-height: 40px;
+    word-break: break-all;
+}
+
+.download-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.download-title-label {
+    margin-right: 5px;
+}
+
+.download-title-button {
+    font-size: 12px;
+    padding: 0 5px;
+}
+
+#download-file-button-container{
+    width: 425px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#download-file-button {
+    background: #ff9b4e;
+    border: 1px solid #c25706;
+    color: white;
+    text-shadow: 0 1px 0px rgba(0, 0, 0, 0.35);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 20px;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 0 #ffb984, inset 0 -1px 0 #db6f1d, inset 0 0 0 1px #f59851, 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#download-file-button:active {
+    box-shadow: none;
+}
+
+#result-message {
+    margin: 10px 0px;
+    font-size: 14px;
+    color: #330202e6;
+    white-space: pre-line;
+}
+
+#err-message {
+    margin: 10px 0px;
+    font-size: 12px;
+    color: #421111;
+    white-space: pre-line;
+    line-height: 15px;
+    height: 200px;
+    overflow-y: auto;
+}
