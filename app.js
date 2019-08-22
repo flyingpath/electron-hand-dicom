@@ -24,10 +24,6 @@ let para = {
     }
 }
 
-const ls = spawn('ls', ['/home']);
-ls.stdout.on('data', (data) => {
-});
-
 $(document).ready(() => {
 });
 
